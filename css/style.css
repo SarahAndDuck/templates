@@ -1,0 +1,356 @@
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.limited {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 30px 0;
+  border: 2px solid #4d433a;
+  margin-bottom: 2px;
+}
+.section__title {
+  text-align: center;
+  font-size: 32px;
+  color: #d0ee52;
+  -webkit-filter: drop-shadow(2px 0 #1e47f7) drop-shadow(-2px 0 #1e47f7) drop-shadow(0 2px #1e47f7) drop-shadow(0 -2px #1e47f7) drop-shadow(0 3px #1e47f7) drop-shadow(0 -3px #1e47f7) drop-shadow(0 4px #1e47f7) drop-shadow(0 -4px #1e47f7);
+          filter: drop-shadow(2px 0 #1e47f7) drop-shadow(-2px 0 #1e47f7) drop-shadow(0 2px #1e47f7) drop-shadow(0 -2px #1e47f7) drop-shadow(0 3px #1e47f7) drop-shadow(0 -3px #1e47f7) drop-shadow(0 4px #1e47f7) drop-shadow(0 -4px #1e47f7);
+  margin-bottom: 2cqmin;
+}
+
+.footer {
+  text-align: center;
+  text-transform: uppercase;
+  color: #6f6052;
+  padding: 20px;
+  background-color: #1b1a19;
+  position: sticky;
+  bottom: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+      text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textarea without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.section-1 {
+  background-color: #c2b5ea;
+}
+.section-1 .section__content {
+  text-align: center;
+}
+.section-1 .link {
+  position: relative;
+  font-size: 42px;
+  color: #f400af;
+  font-weight: bold;
+}
+.section-1 .link::before {
+  content: attr(data-content);
+  position: absolute;
+  color: #ffffff;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+.section-1 .link:hover::before {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.section-2 {
+  background-color: #f55428;
+}
+.section-2 .section__content {
+  text-align: center;
+}
+.section-2 .link {
+  position: relative;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f2d3bf;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.section-2 .link::before, .section-2 .link::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  display: block;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  background-color: #ffffff;
+}
+.section-2 .link::before {
+  content: "";
+  top: 0;
+  -webkit-transform: translateY(-8px);
+      -ms-transform: translateY(-8px);
+          transform: translateY(-8px);
+  opacity: 0;
+}
+.section-2 .link::after {
+  bottom: 0;
+  -webkit-transform: translateY(12px);
+      -ms-transform: translateY(12px);
+          transform: translateY(12px);
+  opacity: 0;
+}
+.section-2 .link:hover::before, .section-2 .link:hover::after {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: opacity 0.3s transform 0.3s;
+  transition: opacity 0.3s transform 0.3s;
+  opacity: 1;
+}
+.section-2 .link:hover {
+  color: #ffffff;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.section-3 {
+  background-color: #9dbde3;
+}
+.section-3 .section__content {
+  text-align: center;
+}
+.section-3 .link {
+  position: relative;
+  font-size: 40px;
+  font-weight: bold;
+  color: #5987bf;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.section-3 .link::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  background-color: #183b65;
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 0;
+  border-radius: 30px;
+  -webkit-transition: opacity 0.3s transform 0.3s;
+  transition: opacity 0.3s transform 0.3s;
+}
+.section-3 .link:hover::after {
+  -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-transition: opacity 0.3s transform 0.3s;
+  transition: opacity 0.3s transform 0.3s;
+  opacity: 1;
+}
+.section-3 .link:hover {
+  color: #183b65;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.section-4 {
+  background-color: #cdd09b;
+}
+.section-4 .section__content {
+  text-align: center;
+}
+.section-4 .link {
+  position: relative;
+  font-size: 40px;
+  font-weight: bold;
+  color: #eb9cbc;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  padding: 0 30px;
+}
+.section-4 .link::after, .section-4 .link::before {
+  content: "";
+  height: 2px;
+  width: 43px;
+  position: absolute;
+  background-color: #eb9cbc;
+  opacity: 0.2;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.section-4 .link::before {
+  top: 0;
+  left: 0;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+.section-4 .link::after {
+  bottom: 0;
+  right: 0;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.section-4 .link:hover::before {
+  -webkit-transform: rotate(0) translateX(-50%);
+      -ms-transform: rotate(0) translateX(-50%);
+          transform: rotate(0) translateX(-50%);
+  left: 50%;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.section-4 .link:hover::after {
+  -webkit-transform: rotate(0) translateX(50%);
+      -ms-transform: rotate(0) translateX(50%);
+          transform: rotate(0) translateX(50%);
+  right: 50%;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header {
+  padding: 20px;
+  background-color: #ffffff;
+}
+.header__title {
+  padding: 20px;
+  text-align: center;
+  color: #4d433a;
+  text-transform: uppercase;
+  border: 2px solid #4d433a;
+}/*# sourceMappingURL=style.css.map */
