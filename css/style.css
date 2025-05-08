@@ -25,14 +25,15 @@
   padding: 30px 0;
   border: 2px solid #4d433a;
   margin-bottom: 2px;
+  background-color: #f55428;
 }
 .section__title {
   text-align: center;
   font-size: 32px;
   color: #d0ee52;
-  -webkit-filter: drop-shadow(2px 0 #1e47f7) drop-shadow(-2px 0 #1e47f7) drop-shadow(0 2px #1e47f7) drop-shadow(0 -2px #1e47f7) drop-shadow(0 3px #1e47f7) drop-shadow(0 -3px #1e47f7) drop-shadow(0 4px #1e47f7) drop-shadow(0 -4px #1e47f7);
-          filter: drop-shadow(2px 0 #1e47f7) drop-shadow(-2px 0 #1e47f7) drop-shadow(0 2px #1e47f7) drop-shadow(0 -2px #1e47f7) drop-shadow(0 3px #1e47f7) drop-shadow(0 -3px #1e47f7) drop-shadow(0 4px #1e47f7) drop-shadow(0 -4px #1e47f7);
   margin-bottom: 2cqmin;
+  -webkit-filter: drop-shadow(0 -2px #1e47f7) drop-shadow(-1px -3px #1e47f7) drop-shadow(-2px -4px #1e47f7);
+          filter: drop-shadow(0 -2px #1e47f7) drop-shadow(-1px -3px #1e47f7) drop-shadow(-2px -4px #1e47f7);
 }
 
 .footer {
@@ -84,7 +85,7 @@ li {
   list-style: none;
 }
 
-a {
+* {
   text-decoration: none;
 }
 
@@ -145,16 +146,13 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-.section-1 {
-  background-color: #c2b5ea;
-}
 .section-1 .section__content {
   text-align: center;
 }
 .section-1 .link {
   position: relative;
   font-size: 42px;
-  color: #f400af;
+  color: #4b33cf;
   font-weight: bold;
 }
 .section-1 .link::before {
@@ -175,9 +173,6 @@ textarea:not([rows]) {
   transition: 0.7s;
 }
 
-.section-2 {
-  background-color: #f55428;
-}
 .section-2 .section__content {
   text-align: center;
 }
@@ -231,9 +226,6 @@ textarea:not([rows]) {
   transition: color 0.3s;
 }
 
-.section-3 {
-  background-color: #9dbde3;
-}
 .section-3 .section__content {
   text-align: center;
 }
@@ -280,9 +272,6 @@ textarea:not([rows]) {
   transition: color 0.3s;
 }
 
-.section-4 {
-  background-color: #cdd09b;
-}
 .section-4 .section__content {
   text-align: center;
 }
@@ -397,8 +386,20 @@ textarea:not([rows]) {
   color: #294086;
 }
 
+.header {
+  padding: 20px;
+  background-color: #ffffff;
+}
+.header__title {
+  padding: 20px;
+  text-align: center;
+  color: #4d433a;
+  text-transform: uppercase;
+  border: 2px solid #4d433a;
+}
+
 .section-6 {
-  background-color: #ededed;
+  background-color: #aea2f4;
 }
 .section-6 .section__content {
   margin: 40px auto;
@@ -428,6 +429,8 @@ textarea:not([rows]) {
 }
 .section-6 .slaider__inner {
   overflow: hidden;
+  -webkit-filter: drop-shadow(0 0 8px #666666);
+          filter: drop-shadow(0 0 8px #666666);
 }
 .section-6 .slaider__slaides {
   width: 300%;
@@ -435,6 +438,9 @@ textarea:not([rows]) {
   transition: -webkit-transform 0.8s ease;
   transition: transform 0.8s ease;
   transition: transform 0.8s ease, -webkit-transform 0.8s ease;
+}
+.section-6 .slaider__slaides img {
+  border: 2px solid #666666;
 }
 .section-6 .slaider img {
   width: 450px;
@@ -466,14 +472,51 @@ textarea:not([rows]) {
           transform: translate(-900px);
 }
 
-.header {
-  padding: 20px;
+.section-7 {
+  background-color: #aea2f4;
+}
+.section-7 .section__content {
+  text-align: center;
+}
+.section-7 .breadcrumbs {
+  height: 39px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #ffffff;
 }
-.header__title {
-  padding: 20px;
-  text-align: center;
-  color: #4d433a;
-  text-transform: uppercase;
-  border: 2px solid #4d433a;
+.section-7 .breadcrumbs a {
+  height: 39px;
+  line-height: 100%;
+  padding: 10px 10px 10px 50px;
+  position: relative;
+  outline: none;
+}
+.section-7 .breadcrumbs a::after {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+  z-index: 1;
+  top: 0;
+  right: -18px;
+  -webkit-box-shadow: 1px 1px 0 1px #dddddd;
+          box-shadow: 1px 1px 0 1px #dddddd;
+  border-radius: 50px 0 0 0;
+  -webkit-transform: rotate(-45deg) scale(0.73);
+      -ms-transform: rotate(-45deg) scale(0.73);
+          transform: rotate(-45deg) scale(0.73);
+}
+.section-7 .breadcrumbs a:hover,
+.section-7 .breadcrumbs a:hover::after,
+.section-7 .breadcrumbs a.active,
+.section-7 .breadcrumbs a.active::after {
+  background-color: #f1c40f;
 }/*# sourceMappingURL=style.css.map */

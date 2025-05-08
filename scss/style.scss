@@ -15,18 +15,20 @@
   padding: 30px 0;
   border: 2px solid #4d433a;
   margin-bottom: 2px;
-
+  background-color: #f55428;
   // .section__title
 
   &__title {
     text-align: center;
     font-size: 32px;
     color: #d0ee52;
-    filter: drop-shadow(2px 0 #1e47f7) drop-shadow(-2px 0 #1e47f7)
-      drop-shadow(0 2px #1e47f7) drop-shadow(0 -2px #1e47f7) //
-      drop-shadow(0 3px #1e47f7) drop-shadow(0 -3px #1e47f7)
-      drop-shadow(0 4px #1e47f7) drop-shadow(0 -4px #1e47f7);
+    // filter: drop-shadow(2px 0 #1e47f7) drop-shadow(-2px 0 #1e47f7)
+    //   drop-shadow(0 2px #1e47f7) drop-shadow(0 -2px #1e47f7) //
+    //   drop-shadow(0 3px #1e47f7) drop-shadow(0 -3px #1e47f7)
+    //   drop-shadow(0 4px #1e47f7) drop-shadow(0 -4px #1e47f7);
     margin-bottom: 2cqmin;
+    filter: drop-shadow(0 -2px #1e47f7) drop-shadow(-1px -3px #1e47f7)
+      drop-shadow(-2px -4px #1e47f7);
   }
 }
 .footer {
@@ -45,5 +47,6 @@
 @import "./section-3.scss";
 @import "./section-4.scss";
 @import "./section-5.scss";
-@import "./section-6.scss";
 @import "./header.scss";
+@import "./section-6.scss";
+@import "./section-7.scss";

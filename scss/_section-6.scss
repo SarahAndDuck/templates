@@ -1,5 +1,5 @@
 .section-6 {
-  background-color: #ededed;
+  background-color: #aea2f4;
   .section__content {
     margin: 40px auto;
     width: 450px;
@@ -29,10 +29,15 @@
 
     &__inner {
       overflow: hidden;
+      filter: drop-shadow(0 0 8px #666666);
     }
     &__slaides {
       width: 300%;
+
       transition: transform 0.8s ease;
+      img {
+        border: 2px solid #666666;
+      }
     }
     img {
       width: 450px;
