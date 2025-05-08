@@ -37,10 +37,13 @@
   background-color: #1b1a19;
   position: sticky;
   bottom: 0;
+  z-index: 4;
 }
 @import "./reset.scss";
 @import "./section-1.scss";
 @import "./section-2.scss";
 @import "./section-3.scss";
 @import "./section-4.scss";
+@import "./section-5.scss";
+@import "./section-6.scss";
 @import "./header.scss";
